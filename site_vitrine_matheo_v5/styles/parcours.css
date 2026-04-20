@@ -1,0 +1,402 @@
+/* ============================================
+   MATHÉO QUIOT - PAGE PARCOURS
+   Trajectoire visuelle, constellation biographique
+   Interaction riche, profondeur
+   ============================================ */
+
+.parcours-section {
+  padding: var(--space-3xl) 0;
+}
+
+.parcours-header {
+  margin-bottom: var(--space-3xl);
+  animation: slideInUp var(--duration-normal) var(--ease-out));
+}
+
+.parcours-intro {
+  font-size: 1.1rem;
+  color: var(--fg-secondary);
+  max-width: 65ch;
+  margin-bottom: var(--space-md);
+}
+
+/* ========== TRAJECTOIRE VISUELLE ========== */
+.trajectory-container {
+  position: relative;
+  margin: var(--space-3xl) 0;
+  padding: var(--space-2xl);
+  background: var(--frost);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+[data-theme="dark"] .trajectory-container {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.trajectory-timeline {
+  position: relative;
+  padding: var(--space-2xl) 0;
+  min-height: 600px;
+}
+
+/* Ligne centrale SVG */
+.trajectory-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    rgba(59, 91, 219, 0.2) 0%,
+    rgba(59, 91, 219, 0.5) 50%,
+    rgba(124, 58, 237, 0.3) 100%);
+  z-index: 1;
+}
+
+[data-theme="dark"] .trajectory-line {
+  background: linear-gradient(180deg, 
+    rgba(76, 110, 245, 0.2) 0%,
+    rgba(76, 110, 245, 0.4) 50%,
+    rgba(124, 58, 237, 0.2) 100%);
+}
+
+/* Conteneur des items */
+.trajectory-items {
+  position: relative;
+  z-index: 2;
+}
+
+.trajectory-item {
+  margin-bottom: var(--space-2xl);
+  opacity: 0;
+  animation: slideInUp var(--duration-normal) var(--ease-out)) forwards;
+}
+
+/* Délai d'animation pour chaque item */
+.trajectory-item:nth-child(1) { animation-delay: 0.1s; }
+.trajectory-item:nth-child(2) { animation-delay: 0.2s; }
+.trajectory-item:nth-child(3) { animation-delay: 0.3s; }
+.trajectory-item:nth-child(4) { animation-delay: 0.4s; }
+.trajectory-item:nth-child(5) { animation-delay: 0.5s; }
+.trajectory-item:nth-child(6) { animation-delay: 0.6s; }
+.trajectory-item:nth-child(7) { animation-delay: 0.7s; }
+.trajectory-item:nth-child(8) { animation-delay: 0.8s; }
+.trajectory-item:nth-child(9) { animation-delay: 0.9s; }
+.trajectory-item:nth-child(10) { animation-delay: 1s; }
+
+/* Alternance gauche/droite */
+.trajectory-item:nth-child(odd) .item-content {
+  margin-left: 0;
+  margin-right: auto;
+  width: 45%;
+  text-align: right;
+}
+
+.trajectory-item:nth-child(even) .item-content {
+  margin-left: auto;
+  margin-right: 0;
+  width: 45%;
+  text-align: left;
+}
+
+/* Node (point de la trajectoire) */
+.trajectory-node {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--bleu-clair), var(--violet-primaire));
+  border: 3px solid var(--bg-primaire);
+  border-radius: 50%;
+  transition: all var(--duration-normal) var(--ease-in-out));
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(59, 91, 219, 0.2);
+}
+
+[data-theme="dark"] .trajectory-node {
+  border-color: var(--dark-bg-primaire);
+}
+
+.trajectory-item:hover .trajectory-node {
+  transform: translateX(-50%) scale(1.5);
+  box-shadow: 0 0 0 10px rgba(59, 91, 219, 0.2);
+}
+
+/* Ligne de connexion vers le node */
+.trajectory-connector {
+  position: absolute;
+  top: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(59, 91, 219, 0.3), transparent);
+  z-index: 0;
+}
+
+.trajectory-item:nth-child(odd) .trajectory-connector {
+  right: calc(-45% - var(--space-xl));
+  width: calc(45% + var(--space-xl));
+}
+
+.trajectory-item:nth-child(even) .trajectory-connector {
+  left: calc(-45% - var(--space-xl));
+  width: calc(45% + var(--space-xl));
+}
+
+/* Contenu du card */
+.item-content {
+  padding: var(--space-lg);
+  background: var(--bg-secondaire);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all var(--duration-normal) var(--ease-in-out));
+  cursor: pointer;
+  position: relative;
+}
+
+.item-content:hover {
+  border-color: var(--bleu-clair);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.item-year {
+  font-size: 0.85rem;
+  color: var(--indigo);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.item-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  color: var(--fg-primaire);
+}
+
+.item-location {
+  font-size: 0.9rem;
+  color: var(--fg-tertiaire);
+  margin-bottom: var(--space-sm);
+}
+
+.item-description {
+  font-size: 0.95rem;
+  color: var(--fg-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.item-type {
+  display: inline-block;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, rgba(59, 91, 219, 0.1), rgba(124, 58, 237, 0.1));
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--indigo);
+  margin-bottom: var(--space-md);
+}
+
+/* ========== DÉTAILS EXPANDIBLES ========== */
+.item-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-normal) var(--ease-in-out));
+  padding-top: 0;
+}
+
+.trajectory-item.active .item-details {
+  max-height: 500px;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.detail-item {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--bleu-clair);
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--indigo);
+  margin-bottom: var(--space-xs);
+}
+
+.detail-value {
+  font-size: 0.95rem;
+  color: var(--fg-secondary);
+}
+
+.detail-value strong {
+  color: var(--fg-primaire);
+}
+
+/* ========== SECTION COMPÉTENCES ========== */
+.skills-section {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-3xl);
+  border-top: 1px solid var(--border-color);
+}
+
+.skills-section h3 {
+  margin-bottom: var(--space-2xl);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+.skill-category {
+  padding: var(--space-lg);
+  background: var(--frost);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all var(--duration-normal) var(--ease-in-out));
+}
+
+[data-theme="dark"] .skill-category {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.skill-category:hover {
+  border-color: var(--violet-primaire);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-category-title {
+  font-weight: 600;
+  color: var(--violet-primaire);
+  margin-bottom: var(--space-md);
+  font-size: 1.1rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skill-badge {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, rgba(59, 91, 219, 0.08), rgba(124, 58, 237, 0.08));
+  border: 1px solid rgba(59, 91, 219, 0.2);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--fg-secondary);
+  transition: all var(--duration-fast) var(--ease-in-out));
+}
+
+.skill-badge:hover {
+  border-color: var(--bleu-clair);
+  color: var(--bleu-clair);
+  background: rgba(59, 91, 219, 0.1);
+}
+
+/* ========== FILTRES (optionnel) ========== */
+.filter-buttons {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all var(--duration-fast) var(--ease-in-out));
+  color: var(--fg-secondary);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--bleu-clair);
+  color: var(--bleu-clair);
+  background: rgba(59, 91, 219, 0.05);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .trajectory-timeline {
+    min-height: 800px;
+  }
+
+  .trajectory-item:nth-child(odd) .item-content,
+  .trajectory-item:nth-child(even) .item-content {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trajectory-container {
+    padding: var(--space-lg);
+  }
+
+  .trajectory-timeline {
+    min-height: auto;
+    padding: var(--space-2xl) 0;
+  }
+
+  .trajectory-item:nth-child(odd) .item-content,
+  .trajectory-item:nth-child(even) .item-content {
+    width: 100%;
+    text-align: left !important;
+  }
+
+  .trajectory-connector {
+    display: none;
+  }
+
+  .trajectory-line {
+    left: 15px;
+  }
+
+  .trajectory-node {
+    left: 15px;
+  }
+
+  .trajectory-item:nth-child(odd) .item-content,
+  .trajectory-item:nth-child(even) .item-content {
+    margin-left: 60px !important;
+    margin-right: 0 !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .parcours-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .trajectory-container {
+    padding: var(--space-md);
+    border-radius: 8px;
+  }
+
+  .filter-buttons {
+    gap: var(--space-sm);
+  }
+
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

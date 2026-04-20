@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacter Mathéo Quiot">
+  <title>Contact - Mathéo Quiot</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+      <defs>
+        <linearGradient id="logoPro" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b5bdb;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Carré extérieur minimaliste -->
+      <rect x="2" y="2" width="36" height="36" rx="6" stroke="url(#logoPro)" stroke-width="1.2" fill="none"/>
+      
+      <!-- Texte monogramme MQ - Georgia serif élégante -->
+      <text x="20" y="28" font-family="'Georgia', 'Garamond', serif" font-size="18" font-weight="700" text-anchor="middle" fill="url(#logoPro)" letter-spacing="-0.5">MQ</text>
+    </svg>
+  </a>
+  
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="parcours.html">Parcours</a></li>
+    <li><a href="education.html">Éducation</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+
+  <div class="nav-controls">
+    <button class="theme-toggle" aria-label="Basculer le thème">🌙</button>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- CONTENU PRINCIPAL -->
+<main>
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-header">
+        <h2>Entrer en contact</h2>
+        <p class="contact-intro">
+          Vous souhaitez discuter d'une collaboration, poser une question ou échanger des idées ? 
+          Voici différents canaux pour me joindre.
+        </p>
+      </div>
+
+      <!-- GRILLE DE CONTACTS -->
+      <div class="contacts-grid">
+        <!-- Email professionnel -->
+        <div class="contact-card">
+          <div class="contact-type">Email professionnel</div>
+          <h3>HEC Paris</h3>
+          <p class="contact-value">matheo.quiot@hec.edu</p>
+          <div class="contact-actions">
+            <a href="mailto:matheo.quiot@hec.edu" class="contact-btn">Envoyer un email</a>
+          </div>
+        </div>
+
+        <!-- Email personnel -->
+        <div class="contact-card">
+          <div class="contact-type">Email personnel</div>
+          <h3>Contact direct</h3>
+          <p class="contact-value">quiot.matheo@gmail.com</p>
+          <div class="contact-actions">
+            <a href="mailto:quiot.matheo@gmail.com" class="contact-btn">Envoyer un email</a>
+          </div>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-card">
+          <div class="contact-type">Réseau professionnel</div>
+          <h3>LinkedIn</h3>
+          <p class="contact-value">Mathéo Quiot Rodolosi</p>
+          <div class="contact-actions">
+            <a href="https://www.linkedin.com/in/math%C3%A9o-quiot-rodolosi-23a260212/" target="_blank" class="contact-btn">Consulter le profil</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTE DE CONTACT -->
+      <div class="contact-note">
+        <p>
+          <strong>Temps de réponse habituel :</strong> 24-48 heures sur l'email professionnel, 48-72 heures sur l'email personnel.
+          <br />
+          N'hésitez pas à m'écrire pour des questions pédagogiques, des propositions de collaboration, ou simplement pour discuter.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>

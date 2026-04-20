@@ -1,0 +1,214 @@
+{
+  "profile": {
+    "name": "Mathéo Quiot",
+    "initials": "MQ",
+    "tagline": "Parcours en mouvement",
+    "description": "Parcours intellectuel et géographique en construction, entre HEC Paris, Buenos Aires, l'enseignement et l'écriture.",
+    "email_professional": "matheo.quiot@hec.edu",
+    "email_personal": "quiot.matheo@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/math%C3%A9o-quiot-rodolosi-23a260212/",
+    "photo": "assets/images/photo.jpg"
+  },
+  
+  "trajectory": [
+    {
+      "id": 1,
+      "year": "2020-2023",
+      "title": "Lycée Alphonse Daudet",
+      "location": "Nîmes",
+      "type": "Formation",
+      "description": "Formation générale: littérature, histoire, philosophie, mathématiques.",
+      "details": {
+        "specialties": "Mathématiques, Littérature, Philosophie"
+      }
+    },
+    {
+      "id": 2,
+      "year": "2023-2025",
+      "title": "Classe Préparatoire",
+      "location": "Lycée Édouard Herriot, Lyon",
+      "type": "Formation",
+      "description": "Préparation aux concours HEC. Apprentissage intensif en économie, mathématiques, sciences sociales.",
+      "details": {
+        "curriculum": "ECS (Économique et Commercial, option Scientifique)",
+        "achievement": "Admis à HEC Paris"
+      }
+    },
+    {
+      "id": 3,
+      "year": "2025-present",
+      "title": "HEC Paris - Programme Grande École",
+      "location": "Jouy-en-Josas",
+      "type": "Formation",
+      "description": "3ème année en cours. Spécialisation en économie et affaires internationales.",
+      "details": {
+        "year": "Troisième année",
+        "exchange": "UTDT, Buenos Aires (2026)"
+      }
+    },
+    {
+      "id": 4,
+      "year": "Jan-Jul 2026",
+      "title": "Échange académique",
+      "location": "Universidad Torcuato Di Tella, Buenos Aires",
+      "type": "Formation",
+      "description": "Immersion dans l'écosystème économique et culturel latino-américain.",
+      "details": {
+        "university": "UTDT (Universidad Torcuato Di Tella)",
+        "curriculum": "Cours de master en économie et affaires internationales"
+      }
+    },
+    {
+      "id": 5,
+      "year": "Été 2024",
+      "title": "Stage - Caisse d'Épargne",
+      "location": "Lyon",
+      "type": "Expérience professionnelle",
+      "description": "Stage en finance et services bancaires.",
+      "details": {
+        "department": "Services clients et gestion de portefeuille"
+      }
+    },
+    {
+      "id": 6,
+      "year": "Sept-Déc 2025",
+      "title": "Aide à domicile et travail de terrain",
+      "location": "Région Rhône-Alpes",
+      "type": "Expérience",
+      "description": "Expérience sociale et humaine. Accompagnement et soutien auprès de populations fragiles.",
+      "details": {
+        "type": "Aide à domicile, accompagnement social"
+      }
+    },
+    {
+      "id": 7,
+      "year": "Sept 2025-present",
+      "title": "Soutien scolaire et transmission",
+      "location": "En ligne et région parisienne",
+      "type": "Enseignement",
+      "description": "Accompagnement pédagogique et soutien scolaire. Ressources organisées et accessibles.",
+      "details": {
+        "subjects": "Mathématiques, Littérature, Économie, Préparation concours"
+      }
+    },
+    {
+      "id": 8,
+      "year": "2024-present",
+      "title": "Rédaction et analyse",
+      "location": "Revue spécialisée",
+      "type": "Création",
+      "description": "Rédaction d'articles analytiques sur l'Amérique latine. Économie, culture, politique.",
+      "details": {
+        "topics": "Économie latino-américaine, culture, enjeux régionaux"
+      }
+    },
+    {
+      "id": 9,
+      "year": "2024-present",
+      "title": "Univers du vin",
+      "location": "France, Argentine",
+      "type": "Intérêt",
+      "description": "Exploration du monde vinicole. Commerce, histoire, culture, terroirs.",
+      "details": {
+        "approach": "Sens, histoire, économie des vignobles"
+      }
+    }
+  ],
+
+  "skills": {
+    "academic": [
+      "Économie",
+      "Mathématiques",
+      "Littérature",
+      "SES"
+    ],
+    "languages": [
+      "Français (natif)",
+      "Anglais (C1)",
+      "Espagnol (B2)"
+    ],
+    "transversal": [
+      "Transmission",
+      "Recherche",
+      "Rédaction",
+      "Analyse"
+    ],
+    "geographies": [
+      "France",
+      "Amérique latine",
+      "Régions viticoles"
+    ]
+  },
+
+  "education_weeks": [
+    {
+      "id": 1,
+      "number": 1,
+      "title": "Fondamentaux",
+      "description": "Bases essentielles",
+      "resources": [
+        {
+          "name": "Fondamentaux des mathématiques",
+          "type": "Article",
+          "url": "#"
+        },
+        {
+          "name": "Introduction à la littérature classique",
+          "type": "Guide",
+          "url": "#"
+        },
+        {
+          "name": "Méthodologie d'analyse de texte",
+          "type": "Fiche",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "title": "Approfondissement",
+      "description": "Aller plus loin",
+      "resources": [
+        {
+          "name": "Algèbre linéaire avancée",
+          "type": "Exercices",
+          "url": "#"
+        },
+        {
+          "name": "Analyse textuelle: Balzac et Flaubert",
+          "type": "Cours",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+
+  "explorations": {
+    "geographies": {
+      "icon": "🗺️",
+      "title": "Géographies",
+      "desc": "Cartographie personnelle des lieux structurants",
+      "locations": [
+        { "name": "Lyon", "desc": "Prépa, études, racines" },
+        { "name": "Jouy-en-Josas", "desc": "HEC Paris, 3 ans" },
+        { "name": "Buenos Aires", "desc": "Échange, découverte, latinité" }
+      ]
+    },
+    "wine": {
+      "icon": "🍷",
+      "title": "Univers du vin",
+      "desc": "Exploration sensible: histoire, économie, culture"
+    },
+    "writing": {
+      "icon": "✍️",
+      "title": "Écriture & transmission",
+      "desc": "Créer du sens par la rédaction et l'enseignement"
+    },
+    "bifurcations": {
+      "icon": "🌉",
+      "title": "Bifurcations",
+      "desc": "Moments de changement et réorientation"
+    }
+  }
+}

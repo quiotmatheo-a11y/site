@@ -1,0 +1,57 @@
+🚀 DÉMARRAGE RAPIDE - Site Mathéo Quiot
+
+=== 3 ÉTAPES ESSENTIELLES ===
+
+1️⃣  AJOUTER TA PHOTO
+   Fichier: assets/images/photo.jpg
+   Format: JPG ou PNG
+   Dimension: 450 x 600 pixels
+   → Lien: Compresse sur https://tinyjpg.com si trop lourd
+
+2️⃣  TESTER EN LOCAL
+   Méthode 1 (simple): Double-clique sur index.html
+   Méthode 2 (mieux): Utilise un serveur local
+   - Python: python -m http.server 8000
+   - Node: npx http-server
+   - Accès: http://localhost:8000
+
+3️⃣  DÉPLOYER EN LIGNE
+   GitHub Pages: Upload sur GitHub, active Pages
+   Netlify: Connecte repo, déploiement auto
+   Serveur FTP: Upload tous les fichiers
+
+=== FICHIERS IMPORTANTS ===
+
+📖 LIRE D'ABORD:
+   → SETUP.html (instructions interactives)
+   → README.md (guide complet)
+
+🎨 MODIFIER:
+   → index.html (contenu page d'accueil)
+   → styles/base.css (couleurs, polices)
+   → data/data.json (infos centralisées)
+
+🔧 SI PROBLÈMES:
+   → CUSTOMIZATION.md (troubleshooting)
+   → FILES_INDEX.md (index des fichiers)
+
+=== STRUCTURE DU PROJET ===
+
+✅ 5 pages HTML (accueil, parcours, ressources, explorations, contact)
+✅ 5 fichiers CSS (design system + pages)
+✅ 1 fichier JS (interactions)
+✅ Documentation complète
+✅ Données JSON pour mises à jour faciles
+
+=== PROCHAINE ACTION ===
+
+👉 Ouvre SETUP.html dans ton navigateur pour les instructions complètes
+
+=== BESOIN D'AIDE? ===
+
+Questions générales → README.md
+Comment modifier? → CUSTOMIZATION.md
+Fichiers détails? → FILES_INDEX.md
+Résumé complet? → PROJECT_SUMMARY.md ou DELIVERY_SUMMARY.md
+
+Bon déploiement! 🎉

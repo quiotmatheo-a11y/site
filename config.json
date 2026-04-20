@@ -1,0 +1,214 @@
+{
+  "site": {
+    "title": "Mathéo Quiot",
+    "description": "Site personnel - Parcours en mouvement, entre HEC Paris, Buenos Aires, l'enseignement et l'écriture",
+    "author": "Mathéo Quiot",
+    "language": "fr",
+    "theme": "blue-violet",
+    "version": "1.0.0",
+    "date_created": "2026-04-20"
+  },
+
+  "navigation": [
+    {
+      "label": "Accueil",
+      "href": "index.html",
+      "icon": "🏠"
+    },
+    {
+      "label": "Parcours",
+      "href": "parcours.html",
+      "icon": "🛤️",
+      "description": "Trajectoire interactive"
+    },
+    {
+      "label": "Ressources",
+      "href": "education.html",
+      "icon": "📚",
+      "description": "Matériel pédagogique"
+    },
+    {
+      "label": "Explorations",
+      "href": "explorations.html",
+      "icon": "🗺️",
+      "description": "Thèmes et intérêts"
+    },
+    {
+      "label": "Contact",
+      "href": "contact.html",
+      "icon": "✉️"
+    }
+  ],
+
+  "design_system": {
+    "colors": {
+      "primary": "#3b5bdb",
+      "secondary": "#7c3aed",
+      "accent": "#6366f1",
+      "light": "#f8fafc",
+      "dark": "#0a0e27",
+      "gray": "#64748b"
+    },
+    "typography": {
+      "heading": "'Georgia', 'Garamond', serif",
+      "body": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "mono": "'Monaco', 'Menlo', monospace"
+    },
+    "breakpoints": {
+      "desktop": "1200px",
+      "tablet": "768px",
+      "mobile": "640px"
+    }
+  },
+
+  "pages": {
+    "index": {
+      "title": "Accueil",
+      "file": "index.html",
+      "sections": [
+        "Hero avec photo",
+        "Activités actuelles",
+        "Explorations"
+      ]
+    },
+    "parcours": {
+      "title": "Parcours",
+      "file": "parcours.html",
+      "features": [
+        "Trajectoire visuelle interactive",
+        "Items expandibles",
+        "Grid de compétences"
+      ],
+      "items": 9
+    },
+    "education": {
+      "title": "Ressources",
+      "file": "education.html",
+      "features": [
+        "Accordéons par semaine",
+        "Ressources téléchargeables",
+        "Structure modulaire"
+      ],
+      "weeks": 8
+    },
+    "explorations": {
+      "title": "Explorations",
+      "file": "explorations.html",
+      "features": [
+        "Cartes thématiques",
+        "Détails au clic",
+        "Approche créative"
+      ],
+      "explorations": 5
+    },
+    "contact": {
+      "title": "Contact",
+      "file": "contact.html",
+      "channels": [
+        "Email professionnel",
+        "Email personnel",
+        "LinkedIn"
+      ]
+    }
+  },
+
+  "features": {
+    "theme_toggle": {
+      "enabled": true,
+      "storage": "localStorage",
+      "key": "matheo-theme"
+    },
+    "mobile_menu": {
+      "enabled": true,
+      "breakpoint": "768px"
+    },
+    "animations": {
+      "enabled": true,
+      "types": [
+        "slideInUp",
+        "slideInLeft",
+        "slideInRight",
+        "fadeIn",
+        "float",
+        "glow"
+      ]
+    },
+    "responsive": {
+      "mobile_first": false,
+      "status": "Desktop-first with responsive breakpoints"
+    }
+  },
+
+  "assets": {
+    "images": {
+      "photo": {
+        "path": "assets/images/photo.jpg",
+        "recommended_size": "450x600px",
+        "formats": ["jpg", "png"],
+        "has_fallback": true
+      }
+    },
+    "documents": {
+      "path": "assets/documents/",
+      "structure": "semaine1/, semaine2/, ...",
+      "types": ["pdf", "docx", "txt"]
+    }
+  },
+
+  "styles": {
+    "base": "styles/base.css",
+    "pages": {
+      "home": "styles/home.css",
+      "parcours": "styles/parcours.css",
+      "education": "styles/education.css",
+      "contact": "styles/contact.css",
+      "explorations": "inline (dans explorations.html)"
+    }
+  },
+
+  "scripts": {
+    "main": "scripts/app.js",
+    "features": [
+      "Theme management",
+      "Mobile navigation",
+      "Active link highlighting",
+      "Trajectory interactions",
+      "Education accordions",
+      "Scroll animations"
+    ]
+  },
+
+  "data": {
+    "centralised": "data/data.json",
+    "includes": [
+      "Profile information",
+      "Trajectory items",
+      "Skills",
+      "Education weeks",
+      "Explorations metadata"
+    ]
+  },
+
+  "optimization": {
+    "image_compression": true,
+    "css_minification": false,
+    "js_minification": false,
+    "responsive": true,
+    "accessibility": true,
+    "seo": true
+  },
+
+  "deployment": {
+    "recommended_platforms": [
+      "GitHub Pages",
+      "Netlify",
+      "Vercel",
+      "Traditional hosting (FTP)"
+    ],
+    "requirements": [
+      "Web server supporting static files",
+      "HTTPS recommended",
+      "Cache control headers recommended"
+    ]
+  }
+}

@@ -1,0 +1,246 @@
+/* ============================================
+   MATHÉO QUIOT - PAGE ÉDUCATION
+   Archives visuelles, structure claire
+   ============================================ */
+
+.education-section {
+  padding: var(--space-3xl) 0;
+}
+
+.education-header {
+  margin-bottom: var(--space-2xl);
+  animation: slideInUp var(--duration-normal) var(--ease-out));
+}
+
+.education-intro {
+  font-size: 1.05rem;
+  color: var(--fg-secondary);
+  max-width: 65ch;
+  margin-bottom: var(--space-lg);
+}
+
+/* ========== WEEK CARDS ========== */
+.weeks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.week-card {
+  background: var(--bg-secondaire);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--ease-in-out));
+  animation: slideInUp var(--duration-normal) var(--ease-out));
+}
+
+.week-card:nth-child(1) { animation-delay: 0.1s; }
+.week-card:nth-child(2) { animation-delay: 0.2s; }
+.week-card:nth-child(3) { animation-delay: 0.3s; }
+.week-card:nth-child(4) { animation-delay: 0.4s; }
+.week-card:nth-child(5) { animation-delay: 0.5s; }
+.week-card:nth-child(6) { animation-delay: 0.6s; }
+.week-card:nth-child(7) { animation-delay: 0.7s; }
+.week-card:nth-child(8) { animation-delay: 0.8s; }
+
+.week-card:hover {
+  border-color: var(--bleu-clair);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+/* ========== WEEK HEADER ========== */
+.week-header {
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, rgba(59, 91, 219, 0.05), rgba(124, 58, 237, 0.05));
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background var(--duration-fast) var(--ease-in-out));
+  border-bottom: 1px solid transparent;
+}
+
+.week-card:hover .week-header {
+  background: linear-gradient(135deg, rgba(59, 91, 219, 0.1), rgba(124, 58, 237, 0.1));
+  border-bottom-color: var(--border-color);
+}
+
+.week-header-content {
+  flex: 1;
+}
+
+.week-number {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--indigo);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.week-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--fg-primaire);
+  margin: 0;
+}
+
+.week-toggle {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--indigo);
+  font-size: 1rem;
+  transition: transform var(--duration-normal) var(--ease-in-out));
+  margin-left: var(--space-md);
+  flex-shrink: 0;
+}
+
+.week-card.active .week-toggle {
+  transform: rotate(180deg);
+}
+
+/* ========== WEEK CONTENT ========== */
+.week-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-normal) var(--ease-in-out));
+}
+
+.week-card.active .week-content {
+  max-height: 600px;
+}
+
+.week-content-inner {
+  padding: var(--space-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+/* ========== RESOURCES ========== */
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.resource-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  background: var(--frost);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all var(--duration-fast) var(--ease-in-out));
+}
+
+[data-theme="dark"] .resource-item {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.resource-item:hover {
+  border-color: var(--bleu-clair);
+  background: linear-gradient(135deg, rgba(59, 91, 219, 0.05), rgba(124, 58, 237, 0.05));
+}
+
+.resource-info {
+  flex: 1;
+}
+
+.resource-name {
+  font-weight: 500;
+  color: var(--fg-primaire);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-xs);
+}
+
+.resource-type {
+  font-size: 0.8rem;
+  color: var(--fg-tertiaire);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.resource-link {
+  padding: 6px 14px;
+  background: linear-gradient(135deg, var(--bleu-primaire), var(--violet-primaire));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-in-out));
+  text-decoration: none;
+  white-space: nowrap;
+  margin-left: var(--space-md);
+}
+
+.resource-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 91, 219, 0.3);
+}
+
+.resource-link.placeholder {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--fg-tertiaire);
+  cursor: default;
+}
+
+.resource-link.placeholder:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .weeks-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .weeks-container {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .resource-link {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .education-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .week-header {
+    padding: var(--space-md);
+  }
+
+  .week-title {
+    font-size: 1rem;
+  }
+
+  .week-content-inner {
+    padding: var(--space-md);
+  }
+
+  .resource-item {
+    padding: var(--space-md);
+  }
+}

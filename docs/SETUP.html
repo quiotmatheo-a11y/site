@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuration - Site Mathéo Quiot</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      color: #0f1117;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #3b5bdb;
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+    .subtitle {
+      color: #64748b;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8fafc;
+      border-radius: 8px;
+      border-left: 4px solid #3b5bdb;
+    }
+    .section h2 {
+      color: #3b5bdb;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .section ol, .section ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    .section li {
+      margin-bottom: 10px;
+    }
+    .code-block {
+      background: #0f1117;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 6px;
+      font-family: 'Monaco', monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+    .highlight {
+      background: #fef3c7;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #3b5bdb, #7c3aed);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      margin-right: 10px;
+      transition: transform 0.2s;
+    }
+    .button:hover {
+      transform: translateY(-2px);
+    }
+    .warning {
+      background: #fee2e2;
+      border: 1px solid #fca5a5;
+      padding: 15px;
+      border-radius: 6px;
+      color: #7f1d1d;
+      margin: 15px 0;
+    }
+    .success {
+      background: #dcfce7;
+      border: 1px solid #86efac;
+      padding: 15px;
+      border-radius: 6px;
+      color: #166534;
+      margin: 15px 0;
+    }
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+    .checklist li {
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .checklist li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+      color: #3b5bdb;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🚀 Configuration du site</h1>
+  <p class="subtitle">Site personnel de Mathéo Quiot - Étapes de démarrage</p>
+
+  <!-- étape 1 -->
+  <div class="section">
+    <h2>✅ Étape 1: Vérifier les fichiers</h2>
+    <p>Le projet est prêt ! Tous les fichiers ont été créés et organisés.</p>
+    <ul class="checklist">
+      <li>index.html ✓ Créé</li>
+      <li>parcours.html ✓ Créé</li>
+      <li>education.html ✓ Créé</li>
+      <li>explorations.html ✓ Créé</li>
+      <li>contact.html ✓ Créé</li>
+      <li>styles/ (5 fichiers CSS) ✓ Créé</li>
+      <li>scripts/app.js ✓ Créé</li>
+      <li>data/data.json + config.json ✓ Créé</li>
+    </ul>
+  </div>
+
+  <!-- étape 2 -->
+  <div class="section">
+    <h2>📸 Étape 2: Ajouter ta photo</h2>
+    <p><span class="highlight">IMPORTANT:</span> C'est l'étape clé pour voir le site prendre vie.</p>
+    <ol>
+      <li>Prépare une photo de toi au format <span class="highlight">JPG</span> ou PNG</li>
+      <li>Dimensions recommandées: <span class="highlight">450 x 600 pixels</span> (ratio 3:4)</li>
+      <li>Compresse l'image (< 200 KB): https://tinyjpg.com</li>
+      <li>Place le fichier à: <span class="highlight">assets/images/photo.jpg</span></li>
+    </ol>
+    <div class="code-block">
+# Créer le dossier si absent
+mkdir -p assets/images
+# Placer ta photo: assets/images/photo.jpg
+    </div>
+    <div class="success">
+      ✓ Le site charge automatiquement la photo. S'il manque un fallback SVG s'affiche.
+    </div>
+  </div>
+
+  <!-- étape 3 -->
+  <div class="section">
+    <h2>🌐 Étape 3: Tester en local</h2>
+    <p>Ouvre le site dans ton navigateur pour le prévisualiser.</p>
+    <ol>
+      <li>Double-clique sur <span class="highlight">index.html</span></li>
+      <li>Ou ouvre via le navigateur: File → Open</li>
+      <li>Ou en ligne de commande: <span class="highlight">cd</span> vers le dossier et ouvre index.html</li>
+    </ol>
+    <div class="warning">
+      ⚠️ Pour les ressources dynamiques (accordéons, thème), utilise un serveur local:
+    </div>
+    <div class="code-block">
+# Python 3
+python -m http.server 8000
+
+# Node (si npm installé)  
+npx http-server
+
+# Accès: http://localhost:8000
+    </div>
+  </div>
+
+  <!-- étape 4 -->
+  <div class="section">
+    <h2>📚 Étape 4: Ajouter les ressources pédagogiques</h2>
+    <p>Optionnel mais recommandé pour remplir la page Ressources.</p>
+    <ol>
+      <li>Crée les dossiers:
+        <div class="code-block">
+assets/documents/
+├── semaine1/
+├── semaine2/
+├── semaine3/
+...
+└── semaine8/
+        </div>
+      </li>
+      <li>Ajoute tes fichiers PDF (ex: semaine1/01-maths.pdf)</li>
+      <li>Mets à jour les liens dans <span class="highlight">education.html</span>
+        <div class="code-block">
+# De ceci:
+&lt;a href="#" class="resource-link placeholder"&gt;À venir&lt;/a&gt;
+
+# À ceci:
+&lt;a href="assets/documents/semaine1/01-maths.pdf" download&gt;Télécharger&lt;/a&gt;
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- étape 5 -->
+  <div class="section">
+    <h2>🎨 Étape 5: Personnalisation (optionnel)</h2>
+    <p>Modifie les couleurs, polices, contenu selon tes préférences.</p>
+    <ul>
+      <li><strong>Texte/contenu:</strong> Édite directement les fichiers HTML</li>
+      <li><strong>Couleurs:</strong> Modifie <span class="highlight">styles/base.css</span> (variables :root)</li>
+      <li><strong>Polices:</strong> Change <span class="highlight">--font-display</span> et <span class="highlight">--font-sans</span></li>
+      <li><strong>Plus d'infos:</strong> Voir <span class="highlight">CUSTOMIZATION.md</span></li>
+    </ul>
+  </div>
+
+  <!-- étape 6 -->
+  <div class="section">
+    <h2>🚀 Étape 6: Déployer</h2>
+    <p>Rends ton site accessible en ligne en quelques minutes.</p>
+    <ol>
+      <li><strong>GitHub Pages (gratuit):</strong>
+        <ul>
+          <li>Crée un repo GitHub</li>
+          <li>Upload tous tes fichiers</li>
+          <li>Active Pages dans Settings</li>
+          <li>Accès: github.com/tonnom/repo</li>
+        </ul>
+      </li>
+      <li><strong>Netlify (gratuit + plus de features):</strong>
+        <ul>
+          <li>Connecte ton repo GitHub</li>
+          <li>Déploiement automatique à chaque push</li>
+          <li>Custom domain possible</li>
+        </ul>
+      </li>
+      <li><strong>Hébergeur classique (FTP):</strong>
+        <ul>
+          <li>Upload par FTP/SFTP</li>
+          <li>index.html à la racine</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <!-- checklist finale -->
+  <div class="section">
+    <h2>📋 Checklist finale</h2>
+    <ul class="checklist">
+      <li>Photo placée à assets/images/photo.jpg</li>
+      <li>Testé en local (navigateur ou serveur local)</li>
+      <li>Thème clair/sombre fonctionne ✓</li>
+      <li>Navigation mobile (hamburger) fonctionne ✓</li>
+      <li>Accordéons sur page Ressources fonctionnent ✓</li>
+      <li>Tous les liens internes marchent ✓</li>
+      <li>Page Parcours trajectoire affichée ✓</li>
+      <li>Page Explorations interactive ✓</li>
+      <li>Ressources pédagogiques ajoutées (optionnel)</li>
+      <li>Déployé en ligne ✓</li>
+    </ul>
+  </div>
+
+  <!-- ressources -->
+  <div class="section">
+    <h2>📖 Documentation complète</h2>
+    <ul>
+      <li><span class="highlight">README.md</span> - Guide complet du projet</li>
+      <li><span class="highlight">CUSTOMIZATION.md</span> - Guide détaillé de modification</li>
+      <li><span class="highlight">PROJECT_SUMMARY.md</span> - Résumé complet</li>
+      <li><span class="highlight">data/data.json</span> - Données centralisées</li>
+      <li><span class="highlight">config.json</span> - Configuration du site</li>
+    </ul>
+  </div>
+
+  <!-- aide -->
+  <div class="section">
+    <h2>❓ Aide / Troubleshooting</h2>
+    <p><strong>La photo ne s'affiche pas?</strong><br>
+      → Vérifie le chemin: assets/images/photo.jpg<br>
+      → Essaie .png au lieu de .jpg<br>
+      → Vérifiez la taille du fichier
+    </p>
+    <p><strong>Le site ne charge pas correctement?</strong><br>
+      → Ouvre la console (F12) pour les erreurs<br>
+      → Utilise un serveur local (http://localhost)<br>
+      → Vide le cache navigateur (Ctrl+Shift+Delete)
+    </p>
+    <p><strong>Le thème ne change pas?</strong><br>
+      → Vérifiez que scripts/app.js est chargé<br>
+      → Regardez la console pour erreurs<br>
+      → Vérifiez localStorage dans DevTools
+    </p>
+  </div>
+
+  <!-- appel à action -->
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="index.html" class="button">Voir le site</a>
+    <a href="README.md" class="button">Lire la documentation</a>
+  </div>
+</div>
+
+<footer>
+  Site personnel - Mathéo Quiot © 2026<br>
+  Configuration complète et prête à déployer
+</footer>
+
+</body>
+</html>
